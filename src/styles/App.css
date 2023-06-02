@@ -9,7 +9,7 @@
 }
 
 .monthview-content-container {
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .weekday-header-container {
@@ -25,5 +25,23 @@
   color: var(--color-black);
   height: 2rem;
   justify-content: space-around;
+  align-items: center;
+}
+
+.dates-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.datecell-container {
+  display: flex;
+  position: relative;
+  width: calc(100% / 7);
+  padding: 1rem 0;
+  text-align: center;
+  list-style: none;
+  box-sizing: border-box;
+  justify-content: center;
   align-items: center;
 }

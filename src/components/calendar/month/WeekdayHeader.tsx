@@ -1,7 +1,10 @@
-const WeekdayHeader = () => {
-  const year = 2023;
-  const month = 6;
-  const language = "ko";
+type WeekdayHeaderProps = {
+  year: number;
+  month: number;
+  language: string;
+};
+
+const WeekdayHeader = ({ year, month, language }: WeekdayHeaderProps) => {
   const getFormattedDateText = (
     year: number,
     month: number,
