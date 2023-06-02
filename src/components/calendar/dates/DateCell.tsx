@@ -1,3 +1,9 @@
+import { DATE_FORMAT } from "@/constants/format";
+import { CalendarContext } from "@/context/CalendarContext";
+import useHandleClickDate from "@/hooks/useHandleClickDate";
+import dayjs from "dayjs";
+import { useContext } from "react";
+
 type DateCellProps = {
   date: number;
   month: number;
@@ -13,7 +19,37 @@ const DateCell = ({
   isOtherDay,
   lastDayOfMonth,
 }: DateCellProps) => {
-  return <li className="datecell-container">{date}</li>;
+  const { bookingDates, today } = useContext(CalendarContext);
+  const currentDate = dayjs(new Date(year, month - 1, date));
+  const isAfterLastDay = date > lastDayOfMonth;
+  const { handleClickDate } = useHandleClickDate(today);
+  const currentDateString = currentDate.format(DATE_FORMAT);
+  const todayDateString = today.format(DATE_FORMAT);
+  const checkInDateString = bookingDates.checkIn?.format(DATE_FORMAT);
+  const checkOutDateString = bookingDates.checkOut?.format(DATE_FORMAT);
+  const isSelectedDate =
+    !isOtherDay &&
+    (checkInDateString === currentDateString ||
+      checkOutDateString === currentDateString);
+  const isWithinRange =
+    !isOtherDay &&
+    checkInDateString &&
+    checkOutDateString &&
+    checkInDateString < currentDateString &&
+    currentDateString < checkOutDateString;
+
+  return (
+    <li
+      className="datecell-container"
+      onClick={
+        !isAfterLastDay && !isOtherDay
+          ? () => handleClickDate(currentDate)
+          : undefined
+      }
+    >
+      {date}
+    </li>
+  );
 };
 
 export default DateCell;
