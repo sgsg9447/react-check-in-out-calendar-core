@@ -1,8 +1,8 @@
-import { DATE_FORMAT } from "@/constants/format";
-import { CalendarContext } from "@/context/CalendarContext";
-import useHandleClickDate from "@/hooks/useHandleClickDate";
 import dayjs from "dayjs";
 import { useContext } from "react";
+import { CalendarContext } from "../../../context/CalendarContext";
+import useHandleClickDate from "../../../hooks/useHandleClickDate";
+import { DATE_FORMAT } from "../../../constants/format";
 type DateCellProps = {
   date: number;
   month: number;
@@ -23,7 +23,6 @@ const DateCell = ({
   const isAfterLastDay = date > lastDayOfMonth;
   const { handleClickDate } = useHandleClickDate(today);
   const currentDateString = currentDate.format(DATE_FORMAT);
-  console.log("currentDateString", currentDateString);
   const todayDateString = today.format(DATE_FORMAT);
   const checkInDateString = bookingDates.checkIn?.format(DATE_FORMAT);
   const checkOutDateString = bookingDates.checkOut?.format(DATE_FORMAT);
