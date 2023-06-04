@@ -1,7 +1,7 @@
 import * as dayjs from "dayjs";
 import { useContext } from "react";
 import { CalendarContext } from "../context/CalendarContext";
-import { DATE_FORMAT } from "@/constants/format";
+import { DATE_FORMAT } from "../constants/format";
 
 const useHandleClickDate = (today: dayjs.Dayjs) => {
   const { bookingDates, setBookingDates } = useContext(CalendarContext);

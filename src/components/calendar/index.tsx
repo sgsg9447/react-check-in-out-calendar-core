@@ -1,7 +1,7 @@
-import MonthView from "@/components/calendar/month";
-import { CalendarContext } from "@/context/CalendarContext";
 import { useContext } from "react";
-import MonthNavigation from "@/components/calendar/MonthNavigation";
+import { CalendarContext } from "../../context/CalendarContext";
+import MonthNavigation from "./MonthNavigation";
+import MonthView from "./month";
 
 const Calendar = () => {
   const { calendarSettings } = useContext(CalendarContext);

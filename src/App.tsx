@@ -1,7 +1,7 @@
-import "@/styles/App.css";
-import Calendar from "@/components/calendar";
-import { CalendarProps } from "@/types";
-import { CalendarProvider } from "@/context/CalendarContext";
+import { CalendarProps } from "./types";
+import { CalendarProvider } from "./context/CalendarContext";
+import Calendar from "./components/calendar";
+import "./styles/style.css";
 
 function App(props: CalendarProps) {
   const { onCheckInOutChange } = props;

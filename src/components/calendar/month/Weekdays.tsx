@@ -1,6 +1,7 @@
-import { DAYS_OF_WEEK_EN, DAYS_OF_WEEK_KO } from "@/constants/daysOfWeek";
-import { CalendarContext } from "@/context/CalendarContext";
+
 import { useContext, useMemo } from "react";
+import { CalendarContext } from "../../../context/CalendarContext";
+import { DAYS_OF_WEEK_EN, DAYS_OF_WEEK_KO } from "../../../constants/daysOfWeek";
 
 const Weekdays = () => {
   const { calendarSettings } = useContext(CalendarContext);
