@@ -25,7 +25,7 @@ export const generateMonthCalendar = (
 
   const nextMonthDays = Array.from(
     { length: nextMonthDaysCount },
-    (_, i) => new Date(year, month + 2, i + 1)
+    (_, i) => new Date(year, month + 1, i + 1)
   );
 
   return [...previousMonthDays, ...days, ...nextMonthDays];

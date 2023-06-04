@@ -2,7 +2,6 @@ import { generateMonthCalendar } from "@/utils/dateUtils";
 import { useContext, useMemo } from "react";
 import DateCell from "@/components/calendar/dates/DateCell";
 import { CalendarContext } from "@/context/CalendarContext";
-
 type DatesProps = {
   newYear: number;
   newMonth: number;

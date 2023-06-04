@@ -1,5 +1,12 @@
 .calendar-container {
   display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    flex-direction: column;
+  }
 }
 
 .monthview-container {
@@ -17,7 +24,6 @@
   justify-content: space-evenly;
   align-items: center;
   height: 5vh;
-  margin: 1.5rem 0;
 }
 
 .weekdays {
@@ -57,11 +63,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 20px;
   position: absolute;
-  top: 35px;
+  top: 12px;
   width: 100%;
   z-index: 10;
+}
+
+.button-wrapper .button {
+  background-color: transparent;
+  border: none;
 }
 
 button[disabled] {
