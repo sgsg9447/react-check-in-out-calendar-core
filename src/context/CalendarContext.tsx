@@ -8,7 +8,6 @@ const defaultProps: CalendarProps = {
   startDay: 0,
   numMonths: 1,
   language: "ko",
-  maximumMonths: 12,
   showBookingDatesView: true,
   isRectangular: false,
   resetStyle: false,

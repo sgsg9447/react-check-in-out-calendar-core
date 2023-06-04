@@ -4,20 +4,21 @@ import { useCallback, useContext, useMemo } from "react";
 const MonthNavigation = () => {
   const { today, currentMonth, setCurrentMonth, calendarSettings } =
     useContext(CalendarContext);
-  const { maximumMonths = 12 } = calendarSettings;
+  const { maximumMonths } = calendarSettings;
 
   const laterMonthDate = useMemo(
-    () => today.add(maximumMonths - 1, "month").toDate(),
+    () => today.add(maximumMonths! - 1, "month").toDate(),
     [today, maximumMonths]
   );
-
   const isPrevButtonDisabled =
     today.year() >= currentMonth.year() &&
-    today.month() >= currentMonth.month();
+    today.month() >= currentMonth.month() &&
+    maximumMonths! > 0;
 
   const isNextButtonDisabled =
     laterMonthDate.getFullYear() <= currentMonth.year() &&
-    laterMonthDate.getMonth() <= currentMonth.month();
+    laterMonthDate.getMonth() <= currentMonth.month() &&
+    maximumMonths! > 0;
 
   const handleMonthChange = useCallback(
     (num: number) => {

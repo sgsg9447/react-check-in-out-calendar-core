@@ -14,7 +14,6 @@ const Dates = ({ newYear, newMonth }: DatesProps) => {
   const totalDate = useMemo(() => {
     return generateMonthCalendar(newYear, newMonth, startDay);
   }, [newYear, newMonth, startDay]);
-  console.log("totalDate", totalDate);
   const lastDayOfMonth = useMemo(() => {
     return new Date(newYear, newMonth, 0).getDate();
   }, [newYear, newMonth]);
