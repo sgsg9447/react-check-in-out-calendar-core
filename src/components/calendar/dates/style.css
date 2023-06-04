@@ -1,0 +1,58 @@
+/* UI 라이브러리 */
+/* 
+.datecell-container.today::after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.datecell-container .date-cell:hover::after {
+  content: "";
+  display: block;
+  border: 3px solid red;
+  border-radius: 50%; /* 변경이 필요할 수 있습니다. */
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.datecell-container.selected .date-cell::after {
+  content: "";
+  display: block;
+  border: 3px solid red;
+  border-radius: 50%; /* 변경이 필요할 수 있습니다. */
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.datecell-container.within-range .date-cell::after {
+  /* within-range에 해당하는 스타일 */
+  content: "";
+  display: block;
+  border: 3px solid pink;
+  border-radius: 50%; /* 변경이 필요할 수 있습니다. */
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.datecell-container.other-day {
+  /* isOtherDay가 true인 경우에 적용할 스타일 */
+  visibility: hidden;
+}

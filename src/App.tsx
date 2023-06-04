@@ -1,10 +1,19 @@
 import "@/styles/App.css";
 import Calendar from "@/components/calendar";
+import { CalendarProps } from "@/types";
+import { CalendarProvider } from "@/context/CalendarContext";
 
-function App() {
+function App(props: CalendarProps) {
+  const { onCheckInOutChange } = props;
+
   return (
     <>
-      <Calendar />
+      <CalendarProvider
+        calendarProps={props}
+        onCheckInOutChange={onCheckInOutChange}
+      >
+        <Calendar />
+      </CalendarProvider>
     </>
   );
 }

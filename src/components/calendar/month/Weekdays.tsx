@@ -1,9 +1,11 @@
 import { DAYS_OF_WEEK_EN, DAYS_OF_WEEK_KO } from "@/constants/daysOfWeek";
-import { useMemo } from "react";
+import { CalendarContext } from "@/context/CalendarContext";
+import { useContext, useMemo } from "react";
 
 const Weekdays = () => {
-  const language = "ko"; //TODO : 수정예정
-  const startDay = 0; //TODO : 수정예정
+  const { calendarSettings } = useContext(CalendarContext);
+  const { language = "en", startDay = 0 } = calendarSettings;
+
   const DAYS_OF_WEEK: string[] = useMemo(() => {
     let daysOfWeek = language === "ko" ? DAYS_OF_WEEK_KO : DAYS_OF_WEEK_EN;
     return [...daysOfWeek.slice(startDay), ...daysOfWeek.slice(0, startDay)];

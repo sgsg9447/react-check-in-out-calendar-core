@@ -1,18 +1,18 @@
 import { generateMonthCalendar } from "@/utils/dateUtils";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 import DateCell from "@/components/calendar/dates/DateCell";
-
+import { CalendarContext } from "@/context/CalendarContext";
 type DatesProps = {
   newYear: number;
   newMonth: number;
 };
 
 const Dates = ({ newYear, newMonth }: DatesProps) => {
-  const startDay = 0;
+  const { calendarSettings } = useContext(CalendarContext);
+  const { startDay = 0 } = calendarSettings;
   const totalDate = useMemo(() => {
     return generateMonthCalendar(newYear, newMonth, startDay);
   }, [newYear, newMonth, startDay]);
-
   const lastDayOfMonth = useMemo(() => {
     return new Date(newYear, newMonth, 0).getDate();
   }, [newYear, newMonth]);

@@ -1,5 +1,12 @@
 .calendar-container {
   display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    flex-direction: column;
+  }
 }
 
 .monthview-container {
@@ -9,7 +16,7 @@
 }
 
 .monthview-content-container {
-  /* margin: 20px; */
+  margin: 20px;
 }
 
 .weekday-header-container {
@@ -17,7 +24,6 @@
   justify-content: space-evenly;
   align-items: center;
   height: 5vh;
-  margin: 1.5rem 0;
 }
 
 .weekdays {
@@ -44,4 +50,31 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+}
+
+.month-navigation-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.button-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  z-index: 10;
+}
+
+.button-wrapper .button {
+  background-color: transparent;
+  border: none;
+}
+
+button[disabled] {
+  visibility: hidden;
 }
