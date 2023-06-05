@@ -1,8 +1,9 @@
 {
   "name": "react-check-in-out-calendar-core",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "A core library for creating calendars with check-in and check-out functionality in React.",
   "type": "module",
+  "license": "MIT",
   "keywords": [
     "calendar",
     "core",
@@ -44,6 +45,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "vite-plugin-libcss": "^1.0.6"
   }
 }
