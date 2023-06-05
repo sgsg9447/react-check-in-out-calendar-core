@@ -69,6 +69,10 @@ Here are the CSS class names that are used in the original `react-check-in-out-c
 - `other-day` : The cells representing dates that fall outside of the current month, i.e., dates from the previous or the next month that are displayed in the current month's calendar view.
 - `before-today` : The cells representing dates that occur before the current date. These dates are generally not selectable in the context of a booking or reservation system.
 
+## UI Library
+[react-check-in-out-calendar](https://www.npmjs.com/package/react-check-in-out-calendar)
+- The UI library is currently still under development. At present, the core library has not yet been incorporated. Therefore, what we have is the original calendar library which combines both the previous logic and UI. Updates integrating the core library will be coming soon.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
