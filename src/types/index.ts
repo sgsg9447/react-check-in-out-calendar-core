@@ -1,33 +1,21 @@
-import { Dayjs } from "dayjs";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 
 export type BookingDatesType = {
   checkIn?: dayjs.Dayjs;
   checkOut?: dayjs.Dayjs;
 };
 
+export type LanguageType = "ko" | "en";
+export type StartDayType = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+export type NumMonthsType = 1 | 2 | 3 | 4;
+
 export interface CalendarProps {
-  mainColor?: string;
-  subMainColor?: string;
-  startDay?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
-  numMonths?: 1 | 2 | 3 | 4;
-  language?: "ko" | "en";
-  /**
-   * The maximum number of months that the calendar can display.
-   * Can be 12, 24, 36, etc.
-   */
+  startDay?: StartDayType;
+  numMonths?: NumMonthsType;
+  language?: LanguageType;
   maximumMonths?: number;
-  /**
-   *   defaultCheckIn?: "YYYY-MM-DD"
-   */
   defaultCheckIn?: string | Dayjs;
-  /**
-   *   defaultCheckOut?: "YYYY-MM-DD"
-   */
   defaultCheckOut?: string | Dayjs;
-  showBookingDatesView?: boolean;
-  isRectangular?: boolean;
-  resetStyle?: boolean;
   onCheckInOutChange?: (checkInDate?: Date, checkOutDate?: Date) => void;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "react-check-in-out-calendar-core",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A core library for creating calendars with check-in and check-out functionality in React.",
   "type": "module",
   "license": "MIT",

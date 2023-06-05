@@ -12,9 +12,6 @@ const defaultProps: CalendarProps = {
   startDay: 0,
   numMonths: 1,
   language: "ko",
-  showBookingDatesView: true,
-  isRectangular: false,
-  resetStyle: false,
   defaultCheckIn: dayjs().add(7, "day"),
   defaultCheckOut: dayjs().add(8, "day"),
 };
