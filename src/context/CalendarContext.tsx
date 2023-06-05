@@ -1,10 +1,12 @@
 import dayjs from "dayjs";
 import { ReactNode, createContext, useState } from "react";
-import { BookingDatesType, CalendarProps, CheckInOutChangeType } from "../types";
+import {
+  BookingDatesType,
+  CalendarProps,
+  CheckInOutChangeType,
+} from "../types";
 import useGetSavedPeriod from "../hooks/useGetSavedPeriod";
 import useUpdateCheckInOut from "../hooks/useUpdateCheckInOut";
-
-
 
 const defaultProps: CalendarProps = {
   startDay: 0,

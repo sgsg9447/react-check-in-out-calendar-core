@@ -3,12 +3,13 @@ import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 import dts from "vite-plugin-dts";
+import libCss from "vite-plugin-libcss";
 
 // Get directory name in URL
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [react(), dts(), libCss()],
 
   build: {
     lib: {
