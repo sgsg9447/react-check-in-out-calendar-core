@@ -6,6 +6,7 @@ import MonthView from "./month";
 const Calendar = () => {
   const { calendarSettings } = useContext(CalendarContext);
   const { numMonths } = calendarSettings;
+
   return (
     <>
       <MonthNavigation />
