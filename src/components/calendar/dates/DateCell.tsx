@@ -51,6 +51,10 @@ const DateCell = ({
     classNames += "other-day";
   }
 
+  if (currentDateString < todayDateString) {
+    classNames += " before-today";
+  }
+
   return (
     <li
       className={`datecell-container ${classNames}`}
