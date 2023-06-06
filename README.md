@@ -1,6 +1,6 @@
 # react-check-in-out-calendar-core
 
-<img width="1511" alt="image" src="https://github.com/sgsg9447/react-check-in-out-calendar/assets/87474789/924aa6f2-5f70-4f31-a32a-8a5c2f79b27a">
+<img width="1497" alt="image" src="https://github.com/sgsg9447/react-check-in-out-calendar-core/assets/87474789/59159833-52f6-4cc2-8c5e-15d8598b42b4">
 
 The react-check-in-out-calendar-core library provides the core functionality of the react-check-in-out-calendar component. It is a lightweight library that enables you to have the powerful date manipulation capabilities of the original component without the UI elements, giving you complete freedom to design and style your own calendar component.
 
@@ -70,7 +70,9 @@ Here are the CSS class names that are used in the original `react-check-in-out-c
 - `before-today` : The cells representing dates that occur before the current date. These dates are generally not selectable in the context of a booking or reservation system.
 
 ## UI Library
+
 [react-check-in-out-calendar](https://www.npmjs.com/package/react-check-in-out-calendar)
+
 - The UI library is currently still under development. At present, the core library has not yet been incorporated. Therefore, what we have is the original calendar library which combines both the previous logic and UI. Updates integrating the core library will be coming soon.
 
 ## Contributing
