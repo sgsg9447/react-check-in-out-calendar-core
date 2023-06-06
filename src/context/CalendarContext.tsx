@@ -10,8 +10,8 @@ import useUpdateCheckInOut from "../hooks/useUpdateCheckInOut";
 
 const defaultProps: CalendarProps = {
   startDay: 0,
-  numMonths: 1,
-  language: "ko",
+  numMonths: 2,
+  language: "en",
   defaultCheckIn: dayjs().add(7, "day"),
   defaultCheckOut: dayjs().add(8, "day"),
 };
